@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
 
-    engine.load(QUrl::fromLocalFile("D:/Delta/DBUS/Receiver/Main.qml"));
+    engine.loadFromModule("Receiver", "Main");
 
     return app.exec();
 }
